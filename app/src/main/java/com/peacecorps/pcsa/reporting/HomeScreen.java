@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.peacecorps.pcsa.R;
+import com.peacecorps.pcsa.utils.Util;
 
 /**
  * @author Buddhiprabha Erabadda
@@ -57,7 +57,7 @@ public class HomeScreen extends Activity {
                 startActivity(types);
                 */
 
-                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+                Util.showUnavailableMessage(HomeScreen.this);
             }
         });
 
@@ -68,8 +68,8 @@ public class HomeScreen extends Activity {
                 Intent types = new Intent(HomeScreen.this, Confidentiality.class);
                 startActivity(types);
                 */
-                
-                Toast.makeText(HomeScreen.this, getString(R.string.unavailable_function), Toast.LENGTH_SHORT).show();
+
+                Util.showUnavailableMessage(HomeScreen.this);
             }
         });
 
